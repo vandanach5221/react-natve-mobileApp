@@ -47,7 +47,7 @@ export default class DashBoard extends Component {
         <View style={styles.btnContainer}>
           <TouchableOpacity style={styles.uerBtn}>
             <Text
-              style={styles.btnTxt}
+              style={styles.buttonText}
               onPress={() => this.props.navigation.navigate('Register')}>
               Create
             </Text>
@@ -56,9 +56,9 @@ export default class DashBoard extends Component {
         <TouchableOpacity onPress={this.getValueFunction} style={styles.button}>
           <Text style={styles.buttonText}> GET VALUE </Text>
         </TouchableOpacity>
-        <Text style={styles.text}> {this.state.getValueOne} </Text>
-        <Text style={styles.text}> {this.state.getValueTwo} </Text>
-        <Text style={styles.text}> {this.state.getValueThree} </Text>
+        <Text style={styles.textInputStyle}> {this.state.getValueOne} </Text>
+        <Text style={styles.textInputStyle}> {this.state.getValueTwo} </Text>
+        <Text style={styles.textInputStyle}> {this.state.getValueThree} </Text>
       </View>
     );
   }
@@ -77,7 +77,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     height: 44,
   },
-
+  welcome: {
+    color: '#fff',
+    fontSize: 30,
+    textAlign: 'center',
+    margin: 10,
+    fontFamily: 'Pangolin-Regular',
+  },
   textInputStyle: {
     textAlign: 'center',
     height: 40,
@@ -100,5 +106,18 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     textAlign: 'center',
+    fontSize: 18,
+  },
+  uerBtn: {
+    backgroundColor: '#FFD700',
+    padding: 15,
+    width: '45%',
+  },
+  btnContainer: {
+    width: '40%',
+    position: 'absolute',
+    top: 5,
+    right: 5,
+    alignSelf: 'flex-end',
   },
 });
